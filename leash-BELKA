@@ -1,0 +1,44 @@
+**NeurIPS 2024 - Predict New Medicines with BELKA**
+Competition Overview
+#Objective
+The primary goal of this competition is to develop machine learning models that can predict the binding affinity of small molecules to proteins. The dataset provided includes molecular structures represented in SMILES format and their corresponding binding information with three different proteins. The challenge is to leverage this data to build predictive models that can accurately classify whether a molecule binds to a given protein or not.
+
+#Dataset
+The dataset is composed of several key components:
+
+buildingblock1_smiles: 271 unique values
+buildingblock2_smiles: 693 unique values
+buildingblock3_smiles: 872 unique values
+molecule_smiles: 98,415,610 unique values
+protein_name: 3 unique values (BRD4, HSA, sEH)
+binds: Target variable indicating whether the molecule binds to the protein (1 for bind, 0 for no bind)
+Each molecule is described using three building blocks in SMILES format, which together define the molecular structure. Additionally, the binding interaction with one of three proteins is provided, along with the target variable indicating the binding result.
+
+#Chemical Representations
+One of the key aspects of this competition is to explore various ways of representing chemical molecules. The provided SMILES (Simplified Molecular Input Line Entry System) strings are a common way to encode molecular structures. Competitors are encouraged to experiment with different representations and methods to enhance predictive performance. Tools like RDKit can be used to convert SMILES strings into molecular fingerprints or other representations suitable for machine learning models.
+
+#DNA-Encoded Libraries (DELs)
+The molecules in this dataset are part of DNA-encoded chemical libraries (DELs). DELs are collections of small molecules with unique DNA barcodes attached, allowing for high-throughput screening. This approach facilitates the testing of large libraries of small molecules against protein targets by pooling molecules in a single tube rather than individual tubes. Binding interactions are identified through DNA sequencing, which simplifies the process of deconvoluting binding molecules from a complex mixture.
+
+#Predictive Modeling
+Participants are expected to build models that can predict the binding affinity based on the molecular structure and protein type. The competition encourages the use of different machine learning techniques and representations to optimize model performance. The performance of the models is evaluated using various metrics such as accuracy, precision, recall, and F1-score.
+
+#Evaluation Metrics
+The competition uses a range of evaluation metrics to assess model performance:
+
+Accuracy: The proportion of correct predictions (both true positives and true negatives) out of all predictions.
+Mean Average Precision (mAP): A measure of precision averaged across different recall levels.
+Precision per class: The proportion of true positive predictions out of all positive predictions for each class.
+Recall per class: The proportion of true positive predictions out of all actual positives for each class.
+F1-score per class: The harmonic mean of precision and recall for each class.
+Micro-average: Metrics calculated globally across all instances.
+Macro-average: Metrics calculated for each class independently and then averaged.
+Weighted-average: Metrics calculated for each class and averaged, weighted by the number of instances in each class.
+Conclusion
+This competition provides a unique opportunity to apply machine learning techniques to the field of cheminformatics. By leveraging the provided dataset and exploring various chemical representations and modeling approaches, participants can contribute to advancing the prediction of molecular binding affinities, which has significant implications in drug discovery and materials design.
+
+
+
+
+
+
